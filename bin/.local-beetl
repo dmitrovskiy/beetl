@@ -1,0 +1,3 @@
+export DB_NAME="beetl";
+export DB_HOST="localhost";
+export DB_OPTIONS="{}";
