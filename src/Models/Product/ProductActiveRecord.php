@@ -12,7 +12,7 @@ class ProductActiveRecord extends AbstractActiveRecord
         = [
             'name' => ['type' => 'string'],
             'description' => ['type' => 'string'],
-            'features' => ['type' => 'string'],
+            'features' => ['type' => 'array'],
             'point' => [
                 'model' => 'Models\Point\PointActiveRecord',
                 'type' => 'reference'

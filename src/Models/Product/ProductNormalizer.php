@@ -10,7 +10,7 @@ class ProductNormalizer extends AbstractNormalizer
     {
         $normalizationRules = [
             [
-                'normalizer' => '\Models\Point\PointNormalizer',
+                'normalizer' => 'Models\Point\PointNormalizer',
                 'dataKey' => 'point',
                 'dataType' => 'single'
             ]

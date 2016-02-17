@@ -5,6 +5,7 @@ namespace Application;
 use Controllers\AuthenticationController;
 use Controllers\IndexController;
 use Controllers\PointsController;
+use Controllers\ProductsController;
 use Controllers\TokenController;
 use Controllers\UsersController;
 use Exception\ConfigException;
@@ -17,6 +18,8 @@ use Models\Application\ApplicationNormalizer;
 use Models\Point\PointActiveRecord;
 use Models\Point\PointModel;
 use Models\Point\PointNormalizer;
+use Models\Product\ProductModel;
+use Models\Product\ProductNormalizer;
 use Models\Token\TokenModel;
 use Models\Token\TokenNormalizer;
 use Models\User\UserModel;
@@ -78,6 +81,9 @@ class Boot
         $this->app->register(new PointsController());
         $this->app->register(new PointModel());
         $this->app->register(new PointNormalizer());
+        $this->app->register(new ProductModel());
+        $this->app->register(new ProductNormalizer());
+        $this->app->register(new ProductsController());
 
         $this->app->register(
             new MongodmServiceProvider(),
@@ -108,5 +114,6 @@ class Boot
 
         $this->app->mount('/', new IndexController());
         $this->app->mount('/points', new PointsController());
+        $this->app->mount('/', new ProductsController());
     }
 }
