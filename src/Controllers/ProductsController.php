@@ -27,7 +27,7 @@ class ProductsController extends AbstractController
 
         $controllers->get('/products/{id}', "$ctlInjection:readById");
         $controllers->put('/products/{id}', "$ctlInjection:updateById");
-        $controllers->put('/products/{id}', "$ctlInjection:deleteById");
+        $controllers->delete('/products/{id}', "$ctlInjection:deleteById");
 
         $controllers->post('/products/', "$ctlInjection:create");
 
