@@ -19,6 +19,9 @@
         "wildsurfer/silex-provider-mongodm": "dev-master",
         "symfony/console": "dev-master"
     },
+    "require-dev": {
+        "heroku/heroku-buildpack-php": "*"
+    },
     "autoload": {
         "psr-0": {
             "": "src/"
