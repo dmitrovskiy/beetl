@@ -21,7 +21,7 @@ class IndexController extends AbstractController
     public function indexAction()
     {
         return $this->response([
-            'message' => 'Welcome to Workout Buddy API'
+            'message' => 'Welcome to Bee.tl API'
         ]);
     }
 
