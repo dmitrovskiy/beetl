@@ -16,7 +16,9 @@ class ProductActiveRecord extends AbstractActiveRecord
             'point' => [
                 'model' => 'Models\Point\PointActiveRecord',
                 'type' => 'reference'
-            ]
+            ],
+            'price' => ['type' => 'float'],
+            'url' => ['type' => 'string']
         ];
 
     public function getName()
@@ -57,5 +59,25 @@ class ProductActiveRecord extends AbstractActiveRecord
     public function setPoint($point)
     {
         $this->__setter('point', $point);
+    }
+
+    public function getPrice()
+    {
+        return $this->__getter('price');
+    }
+
+    public function setPrice($price)
+    {
+        $this->__setter('price', $price);
+    }
+
+    public function getUrl()
+    {
+        return $this->__getter('url');
+    }
+
+    public function setUrl($url)
+    {
+        $this->__setter('url', $url);
     }
 }
